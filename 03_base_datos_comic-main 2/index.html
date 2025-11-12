@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>comic</title>
+</head>
+<body>
+    
+    <header>
+    <div class="brand">
+      <!-- Logo: reemplaza por tu propio SVG/imagen -->
+      <img src="https://via.placeholder.com/180x38?text=MAX" alt="Logo Max">
+    </div>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#">inicio</a></li>
+        <li><a href="#">personajes</a></li>
+        <li><a href="#">capitulos </a></li>
+        <li><a href="#"></a>descripcion</li>
+        
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <button class="btn btn-outline"></button>
+      <button class="btn btn-primary"></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <div class="copy">
+        <h1 id="hero-title"></h1>
+        <p class="lead"></p>
+        <div class="price"></div>
+
+        <div class="ctas" role="group" aria-label="Acciones principales">
+          <a class="btn btn-primary" href="#" role="button"></a>
+          <a class="btn btn-outline" href="#" role="button"></a>
+        </div>
+      </div>
+
+      <!-- Visual simple -->
+      <div class="visual" aria-hidden="true" style="flex:0 0 420px; min-height:260px;">
+        <div style="width:100%; height:100%; border-radius:10px; background:
+          linear-gradient(180deg, rgba(110,75,255,0.35), rgba(0,0,0,0.5)),
+          url('https://images.unsplash.com/photo-1524986100708-2f7a7b6e35de?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
+          box-shadow:0 20px 60px rgba(0,0,0,0.6);"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section class="plans" aria-labelledby="planes-title">
+    <h2 id="planes-title"></h2>
+
+    <div class="plan-grid">
+      <article class="plan" aria-labelledby="plan-basic">
+        <h3 id="plan-basic">LA ABUELA</h3>
+        <div class="price">Es </div>
+        <ul>
+          <li>Es un personaje secundario</li>
+          <li>M</li>
+        </ul>
+        <button class="choose"></button>
+      </article>
+
+      <article class="plan" aria-labelledby="plan-standard">
+        <h3 id="plan-standard">RAIZURA</h3>
+        <div class="price">Es el personaje principal</div>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+        <button class="choose"></button>
+      </article>
+
+      <article class="plan" aria-labelledby="plan-premium">
+        <h3 id="plan-premium">REPORTERO</h3>
+        <div class="price"></div>
+        <ul>
+          <li>Es un personaje terciario</li>
+          <li></li>
+        </ul>
+        <button class="choose"></button>
+      </article>
+
+ <article class="plan" aria-labelledby="plan-premium">
+        <h3 id="plan-premium">CONSTRUCTORES</h3>
+        <div class="price">Es un personajes secundario</div>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+        <button class="choose"></button>
+      </article>
+
+<article class="plan" aria-labelledby="plan-premium">
+        <h3 id="plan-premium">FRUKO</h3>
+        <div class="price">Es uno de los personajes principales</div>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+        <button class="choose"></button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Featured / Carousel -->
+  <section class="featured" aria-labelledby="estrenos-title">
+    <h3 id="estrenos-title"></h3>
+
+    <div class="carousel" id="carousel">
+      <div class="slides" id="slides">
+        <!-- Reemplaza src por imágenes reales -->
+        <div class="slide">
+          <img src="https://via.placeholder.com/600x900?text=Estreno+1" alt="">
+          <div class="meta"><strong></strong></div>
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/600x900?text=Estreno+2" alt="">
+          <div class="meta"><strong></strong></div>
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/600x900?text=Estreno+3" alt="">
+          <div class="meta"><strong></strong></div>
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/600x900?text=Estreno+4" alt="">
+          <div class="meta"><strong></strong></div>
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/600x900?text=Estreno+5" alt="">
+          <div class="meta"><strong></strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <div>
+        <button class="small-btn" id="prev">« </button>
+      </div>
+      <div>
+        <button class="small-btn" id="next"> »</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div></div>
+    <div style="margin-top:8px; font-size:0.85rem; color:#8f8f8f;"></div>
+  </footer>
+
+
+
+
+    <script src="app.js"></script>
+    <script src="bd.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+/* =============================
+   ESTILOS PRINCIPALES - HBO MAX INSPIRED
+   ============================= */
+
+/* -------- Variables -------- */
+:root {
+  --color-bg: #0b0b0b;
+  --color-primary: #8b5cf6;
+  --color-accent: #6d28d9;
+  --color-text: #ffffff;
+  --color-muted: #a1a1aa;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --transition: 0.3s ease;
+  --radius: 10px;
+  --font-main: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+}
+
+/* -------- Reset básico -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =============================
+   HEADER
+   ============================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-border);
+}
+
+header .brand img {
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Botones en header */
+.actions .btn {
+  margin-left: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* =============================
+   HERO SECTION
+   ============================= */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 3rem;
+  background: linear-gradient(180deg, #141414 0%, #0b0b0b 100%);
+}
+
+.hero-inner {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero .copy {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.hero .lead {
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero .ctas {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Imagen visual */
+.hero .visual {
+  flex: 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* =============================
+   PLANES
+   ============================= */
+.plans {
+  padding: 5rem 3rem;
+  text-align: center;
+  background: linear-gradient(180deg, #0b0b0b 0%, #141414 100%);
+}
+
+.plans h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.plan {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.plan h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.plan .price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.plan ul {
+  list-style: none;
+  color: var(--color-muted);
+  margin-bottom: 1.5rem;
+}
+
+.plan ul li {
+  margin: 0.5rem 0;
+}
+
+.plan .choose {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background var(--transition);
+}
+
+.plan .choose:hover {
+  background: var(--color-accent);
+}
+
+/* =============================
+   CAROUSEL - FEATURED
+   ============================= */
+.featured {
+  padding: 4rem 2rem;
+  background: #0b0b0b;
+}
+
+.featured h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+
+.slides {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 200px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition);
+}
+
+.slide img {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  display: block;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+  font-size: 0.9rem;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.small-btn {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.small-btn:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* =============================
+   FOOTER
+   ============================= */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0b0b0b;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+}
