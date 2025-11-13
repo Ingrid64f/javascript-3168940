@@ -1,168 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>comic</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>El Eco Olvidado</title>
 </head>
 <body>
-    
-    <header>
+  <!-- HEADER -->
+  <header>
     <div class="brand">
-      <!-- Logo: reemplaza por tu propio SVG/imagen -->
-      <img src="https://via.placeholder.com/180x38?text=MAX" alt="Logo Max">
+      <img src="https://via.placeholder.com/180x38?text=ECO+OLVIDADO" alt="Logo El Eco Olvidado" />
     </div>
 
-    <nav aria-label="Navegación principal">
+    <nav>
       <ul>
-        <li><a href="#">inicio</a></li>
-        <li><a href="#">personajes</a></li>
-        <li><a href="#">capitulos </a></li>
-        <li><a href="#"></a>descripcion</li>
-        
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#personajes">Personajes</a></li>
+        <li><a href="#capitulos">Capítulos</a></li>
+        <li><a href="#sinopsis">Sinopsis</a></li>
       </ul>
     </nav>
 
     <div class="actions">
-      <button class="btn btn-outline"></button>
-      <button class="btn btn-primary"></button>
+      <button class="btn btn-outline">Leer</button>
+      <button class="btn btn-primary">Explorar</button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-inner">
-      <div class="copy">
-        <h1 id="hero-title"></h1>
-        <p class="lead"></p>
-        <div class="price"></div>
-
-        <div class="ctas" role="group" aria-label="Acciones principales">
-          <a class="btn btn-primary" href="#" role="button"></a>
-          <a class="btn btn-outline" href="#" role="button"></a>
-        </div>
-      </div>
-
-      <!-- Visual simple -->
-      <div class="visual" aria-hidden="true" style="flex:0 0 420px; min-height:260px;">
-        <div style="width:100%; height:100%; border-radius:10px; background:
-          linear-gradient(180deg, rgba(110,75,255,0.35), rgba(0,0,0,0.5)),
-          url('https://images.unsplash.com/photo-1524986100708-2f7a7b6e35de?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
-          box-shadow:0 20px 60px rgba(0,0,0,0.6);"></div>
+ <!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="copy">
+      <h1>El Eco Olvidado</h1>
+      <p class="lead">
+        En el año 2185, la música en vivo es solo un recuerdo.  
+        Pero un joven descubrirá que el ritmo aún puede despertar fantasmas y legados.
+      </p>
+      <div class="ctas">
+        <a href="#personajes" class="btn btn-primary">Conoce a los personajes</a>
+        <a href="#capitulos" class="btn btn-outline">Leer capítulos</a>
       </div>
     </div>
-  </section>
 
-  <!-- Plans -->
-  <section class="plans" aria-labelledby="planes-title">
-    <h2 id="planes-title"></h2>
+    <!-- Aquí se coloca tu imagen personalizada -->
+    <div class="visual">
+      <img src="ciudad.jpg" alt="Imagen principal ciudad" class="hero-img" />
+    </div>
+  </div>
+</section>
 
+  <!-- PERSONAJES -->
+  <section class="plans" id="personajes">
+    <h2>Personajes</h2>
     <div class="plan-grid">
-      <article class="plan" aria-labelledby="plan-basic">
-        <h3 id="plan-basic">LA ABUELA</h3>
-        <div class="price">Es </div>
+      
+      <article class="plan">
+        <img src="Generated Image November 12, 2025 - 4_35PM (1).png" alt="La Abuela" class="personaje-img" />
+        <h3>La Abuela</h3>
+        <div class="price">Guardián del ritmo familiar</div>
         <ul>
-          <li>Es un personaje secundario</li>
-          <li>M</li>
+          <li>Recuerda los tiempos dorados de la música.</li>
+          <li>Inicia el viaje con su misteriosa frase.</li>
         </ul>
-        <button class="choose"></button>
       </article>
 
-      <article class="plan" aria-labelledby="plan-standard">
-        <h3 id="plan-standard">RAIZURA</h3>
-        <div class="price">Es el personaje principal</div>
+      <article class="plan">
+        <img src="Generated Image November 12, 2025 - 4_35PM (3).png" alt="Reportero" class="personaje-img" />
+        <h3>Reportero</h3>
+        <div class="price">Narrador secundario</div>
         <ul>
-          <li></li>
-          <li></li>
+          <li>Testigo de la historia y la demolición del museo.</li>
         </ul>
-        <button class="choose"></button>
       </article>
 
-      <article class="plan" aria-labelledby="plan-premium">
-        <h3 id="plan-premium">REPORTERO</h3>
-        <div class="price"></div>
+      <article class="plan">
+        <img src="Generated Image November 12, 2025 - 4_35PM.png" alt="Raizura" class="personaje-img" />
+        <h3>Raizura</h3>
+        <div class="price">El protagonista</div>
         <ul>
-          <li>Es un personaje terciario</li>
-          <li></li>
+          <li>Un joven curioso que busca respuestas.</li>
+          <li>Despierta el espíritu de Fruko al tocar el piano.</li>
         </ul>
-        <button class="choose"></button>
       </article>
 
- <article class="plan" aria-labelledby="plan-premium">
-        <h3 id="plan-premium">CONSTRUCTORES</h3>
-        <div class="price">Es un personajes secundario</div>
+      <article class="plan">
+         <img src="" alt="Raizura" class="personaje-img" />
+        <h3>Fruko</h3>
+        <div class="price">El fantasma de la sabrosura</div>
         <ul>
-          <li></li>
-          <li></li>
+          <li>Guía espiritual y musical de Raizura.</li>
+          <li>Encarnación del legado musical.</li>
         </ul>
-        <button class="choose"></button>
       </article>
 
-<article class="plan" aria-labelledby="plan-premium">
-        <h3 id="plan-premium">FRUKO</h3>
-        <div class="price">Es uno de los personajes principales</div>
+      <article class="plan">
+         <img src="Generated Image November 12, 2025 - 4_44PM.png" alt="Constructores" class="personaje-img" />
+        <h3>Constructores</h3>
+        <div class="price">Agentes del cambio</div>
         <ul>
-          <li></li>
-          <li></li>
+          <li>Simbolizan la modernidad que borra el pasado.</li>
         </ul>
-        <button class="choose"></button>
       </article>
 
     </div>
   </section>
 
-  <!-- Featured / Carousel -->
-  <section class="featured" aria-labelledby="estrenos-title">
-    <h3 id="estrenos-title"></h3>
-
-    <div class="carousel" id="carousel">
-      <div class="slides" id="slides">
-        <!-- Reemplaza src por imágenes reales -->
+  <!-- CAPÍTULOS -->
+  <section class="featured" id="capitulos">
+    <h3>Capítulos</h3>
+    <div class="carousel">
+      <div class="slides">
         <div class="slide">
-          <img src="https://via.placeholder.com/600x900?text=Estreno+1" alt="">
-          <div class="meta"><strong></strong></div>
+          <img src="https://via.placeholder.com/600x900?text=Capítulo+1" alt="El eco olvidado" />
+          <div class="meta"><strong>Capítulo 1:</strong> El eco olvidado</div>
         </div>
         <div class="slide">
-          <img src="https://via.placeholder.com/600x900?text=Estreno+2" alt="">
-          <div class="meta"><strong></strong></div>
+          <img src="https://via.placeholder.com/600x900?text=Capítulo+2" alt="El fantasma de la sabrosura" />
+          <div class="meta"><strong>Capítulo 2:</strong> El fantasma de la sabrosura</div>
         </div>
         <div class="slide">
-          <img src="https://via.placeholder.com/600x900?text=Estreno+3" alt="">
-          <div class="meta"><strong></strong></div>
+          <img src="https://via.placeholder.com/600x900?text=Capítulo+3" alt="El último concierto" />
+          <div class="meta"><strong>Capítulo 3:</strong> El último concierto</div>
         </div>
-        <div class="slide">
-          <img src="https://via.placeholder.com/600x900?text=Estreno+4" alt="">
-          <div class="meta"><strong></strong></div>
-        </div>
-        <div class="slide">
-          <img src="https://via.placeholder.com/600x900?text=Estreno+5" alt="">
-          <div class="meta"><strong></strong></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-controls">
-      <div>
-        <button class="small-btn" id="prev">« </button>
-      </div>
-      <div>
-        <button class="small-btn" id="next"> »</button>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- SINOPSIS -->
+  <section class="plans" id="sinopsis">
+    <h2>Sinopsis</h2>
+    <p style="max-width:800px;margin:auto;color:var(--color-muted);font-size:1.1rem;">
+      En un futuro donde la música se ha convertido en un eco digital,  
+      un joven llamado Raizura encuentra el último vestigio de la sabrosura en un museo olvidado.  
+      Allí, el espíritu de Fruko lo guía a redescubrir el poder de la música y el legado que vive en su sangre.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <div></div>
-    <div style="margin-top:8px; font-size:0.85rem; color:#8f8f8f;"></div>
+    <div>© 2025 El Eco Olvidado — Inspirado en la narrativa de Salo</div>
+    <div style="margin-top:8px; font-size:0.85rem; color:#8f8f8f;">
+      Proyecto narrativo interactivo — Basado en la estética de HBO Max
+    </div>
   </footer>
-
-
-
-
-    <script src="app.js"></script>
-    <script src="bd.js"></script> 
-
 </body>
 </html>
