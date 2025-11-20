@@ -23,7 +23,7 @@ let comic = {
   "capitulos": [
     {
       "id": 1,
-      "nombre": "El eso olvidado",
+      "nombre": "El eco olvidado",
       "personajes": ["Raizura", "Abuela", "Reportero", "Constructores"],
       "portada": ".img/portada.jpg",
       "descripcion": "Conocemos a raizura, un joven lleno de curiosidad y fascinacion por la musica decide investigar un museo de musica"
@@ -35,8 +35,7 @@ let comic = {
       "portada": ".img/portada.jpg",
       "Descripcion": "Raizura conoce a fruko, un fantasma que decide ayudarlo a revivir su musica",
     },
-    {
-      "id": 3,
+    {   
       "nombre": "El primer y ultimo concierto",
       "personajes": ["Raizura", "Fruko", "Abuela", "Trabajadores", "Ciudadanos"],
       "portada": ".img/portada.jpg",
