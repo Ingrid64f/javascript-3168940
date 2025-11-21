@@ -1,76 +1,55 @@
-const infoComic = document.querySelector(".info-comic")
-const cardPersonajes = document.querySelector(".card-personajes")
+// =========================
+//  HERO (solo reemplazar textos)
+// =========================
 
-console.log(infoComic)
+const heroTitle = document.querySelector(".hero .copy h1");
+const heroDesc = document.querySelector(".hero .copy .lead");
 
-infoComic.innerHTML = `
-
-<small>${comic.year}</small>
-<h3>${comic.nombreComic}</h3>
-<a>${comic.verAhora}</a>
-<p>${comic.sipnosis}</p>
-<p>Género:${comic.genero}</p>
-`
-console.log(comic.Personajes)
-
-comic.Personajes.forEach(char => {
-    const div = document.createElement("div")
-    div.classList.add("personaje")
-    div.innerHTML = `
-        <img src="${char.imagen}" alt="">
-        <p>${char.nombre}</p>
-        <p>${char.descripcion}</p>
-    `
-    
-    cardPersonajes.appendChild(div)
-});
-
-comic.Personajes.forEach(char => {
-   const card = document.createElement("article");
-   card.classList.add("card");
+if (heroTitle) heroTitle.textContent = comic.nombreComic;
+if (heroDesc) heroDesc.textContent = comic.sinopsis;
 
 
-   card.innerHTML = `
-       <div class="card__thumb">
-           <img src="${char.imagen}" alt="Imagen de ${char.nombre}" class="personaje-img">
-       </div>
-      
-       <div class="card__body">
-           <h3 class="card__title">${char.nombre}</h3>
-           <p class="card__text">${char.descripcion}</p>
-       </div>
-   `;
+// =========================
+//  PERSONAJES (sección #personajes)
+// =========================
 
+const personajesGrid = document.querySelector("#personajes .plan-grid");
+personajesGrid.innerHTML = ""; // Limpiamos lo estático
 
-   scrollerPersonajes.appendChild(card);
+comic.personajes.forEach(char => {
+  const article = document.createElement("article");
+  article.classList.add("plan");
+
+  article.innerHTML = `
+    <img src="${char.imagen}" alt="${char.nombre}" class="personaje-img" />
+    <h3>${char.nombre}</h3>
+    <div class="price"></div>
+    <ul>
+      <li>${char.descripcion}</li>
+    </ul>
+  `;
+
+  personajesGrid.appendChild(article);
 });
 
 
+// =========================
+//  CAPÍTULOS (sección #capitulos)
+// =========================
 
+const slidesContainer = document.querySelector(".slides");
+slidesContainer.innerHTML = ""; // Limpiar contenido actual
 
-// --- 3. SECCIÓN DE CAPÍTULOS ---
+comic.capitulos.forEach(cap => {
+  const slide = document.createElement("div");
+  slide.classList.add("slide");
 
+  slide.innerHTML = `
+      <img src="${cap.portada}" alt="${cap.nombre}" />
+      <div class="meta">
+        <strong>Capítulo ${cap.id}:</strong> ${cap.nombre}
+      </div>
+  `;
 
-// Usamos el ID específico para el scroller de capítulos
-const scrollerCapitulos = document.querySelector("#scroller-capitulos");
-scrollerCapitulos.innerHTML = ''; // Limpiamos
-
-
-comic.capitulos.forEach(capitulo => {
-   const card = document.createElement("article");
-   card.classList.add("card");
-
-
-   // Construcción usando background-image para mantener el estilo original de los capítulos
-   card.innerHTML = `
-       <div class="card__thumb" style="background-image: url('${capitulo.portada}');"></div>
-       <div class="card__body">
-           <h3 class="card__title">${capitulo.id}. ${capitulo.nombre}</h3>
-           <p class="card__text">${capitulo.descripcion}</p>
-           <button class="mini">Ver capítulo</button>
-       </div>
-   `;
-
-
-   scrollerCapitulos.appendChild(card);
+  slidesContainer.appendChild(slide);
 });
