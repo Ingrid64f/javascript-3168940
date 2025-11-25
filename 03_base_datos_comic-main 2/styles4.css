@@ -1,4 +1,5 @@
-:root {
+
+ :root {
   --color-bg: #0b0b0b;
   --color-primary: #8b5cf6;
   --color-accent: #6d28d9;
@@ -355,6 +356,22 @@ nav a:hover {
   .episode-img {
     height: 200px;
   }
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 700px;
+  margin: 1.6rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.45);
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 
