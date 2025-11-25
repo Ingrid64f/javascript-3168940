@@ -1,0 +1,335 @@
+:root {
+  --color-bg: #0b0b0b;
+  --color-primary: #8b5cf6;
+  --color-accent: #6d28d9;
+  --color-text: #ffffff;
+  --color-muted: #a1a1aa;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --transition: 0.3s ease;
+  --radius: 10px;
+  --font-main: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-border);
+}
+
+header .brand img {
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+nav a:hover {
+  color: var(--color-primary);
+}
+
+/* BOTONES */
+.actions .btn {
+  margin-left: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 3rem;
+  background: linear-gradient(180deg, #141414 0%, #0b0b0b 100%);
+}
+
+.hero-inner {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero .copy {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.hero .lead {
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero .ctas {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero .visual {
+  flex: 1;
+  border-radius: var(--radius);
+  min-height: 300px;
+  background: linear-gradient(180deg, rgba(110, 75, 255, 0.3), rgba(0, 0, 0, 0.7)),
+    url('https://images.unsplash.com/photo-1524986100708-2f7a7b6e35de?auto=format&fit=crop&w=1200&q=60')
+    center/cover no-repeat;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* PLANES (Personajes) */
+.plans {
+  padding: 5rem 3rem;
+  text-align: center;
+  background: linear-gradient(180deg, #0b0b0b 0%, #141414 100%);
+}
+
+.plans h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.plan {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.plan h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.plan .price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.plan ul {
+  list-style: none;
+  color: var(--color-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* CAPÍTULOS */
+.featured {
+  padding: 4rem 2rem;
+  background: #0b0b0b;
+}
+
+.featured h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.slides {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.slide {
+  min-width: 220px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition);
+}
+
+.slide img {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  display: block;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+  font-size: 0.9rem;
+}
+
+/* IMÁGENES DE PERSONAJES */
+.personaje-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.plan:hover .personaje-img {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* IMAGEN EN HERO */
+.hero .visual {
+  flex: 1;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 300px;
+  background: linear-gradient(180deg, rgba(110, 75, 255, 0.3), rgba(0, 0, 0, 0.7)),
+    url('https://images.unsplash.com/photo-1524986100708-2f7a7b6e35de?auto=format&fit=crop&w=1200&q=60')
+    center/cover no-repeat;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.hero .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.hero .hero-img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 700px;
+  margin: 1.6rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.45);
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0b0b0b;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+}
