@@ -1,6 +1,7 @@
 // =========================
 //  HERO (solo reemplazar textos)
 // =========================
+import { comic } from "./bd";
 
 const heroTitle = document.querySelector(".hero .copy h1");
 const heroDesc = document.querySelector(".hero .copy .lead");
@@ -18,9 +19,17 @@ personajesGrid.innerHTML = ""; // Limpiamos lo estático
 
 comic.personajes.forEach(char => {
   const article = document.createElement("article");
+  const link = document.createElement("a");
+  personajesGrid.classList.add('card')
   article.classList.add("plan");
 
   article.innerHTML = `
+  < a href"./personajes.html?id=${char.id}">
+ <h3>${char.nombre}</h3>
+ <p><img src="${char.imagen} alt="${char.nombre}"></p>
+ <p><strong>Rol:</strong> ${char.rol}</p>
+ <p>${char.descripcion}</p>
+
     <img src="${char.imagen}" alt="${char.nombre}" class="personaje-img" />
     <h3>${char.nombre}</h3>
     <div class="price"></div>
@@ -28,8 +37,7 @@ comic.personajes.forEach(char => {
       <li>${char.descripcion}</li>
     </ul>
   `;
-
-  personajesGrid.appendChild(article);
+  personajesGrid.appendChild(div);
 });
 
 
@@ -53,3 +61,4 @@ comic.capitulos.forEach(cap => {
 
   slidesContainer.appendChild(slide);
 });
+  
