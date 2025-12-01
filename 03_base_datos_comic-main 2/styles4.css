@@ -361,10 +361,11 @@ nav a:hover {
 .hero-video {
   width: 100%;
   max-width: 700px;
-  margin: 1.6rem 0;
+  margin: 2rem auto;   /* <-- CENTRA EL VIDEO */
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 15px 45px rgba(0,0,0,0.45);
+  display: block;      /* <-- Asegura el centrado */
 }
 
 .hero-video video {
@@ -373,6 +374,7 @@ nav a:hover {
   display: block;
   object-fit: cover;
 }
+
 
 
 /* FOOTER */
