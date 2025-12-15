@@ -1,64 +1,55 @@
-// =========================
-//  HERO (solo reemplazar textos)
-// =========================
-import { comic } from "./bd";
+import { comic } from "./bd.js";
 
-const heroTitle = document.querySelector(".hero .copy h1");
-const heroDesc = document.querySelector(".hero .copy .lead");
+/* ESPERAR A QUE CARGUE EL DOM */
+document.addEventListener("DOMContentLoaded", () => {
 
-if (heroTitle) heroTitle.textContent = comic.nombreComic;
-if (heroDesc) heroDesc.textContent = comic.sinopsis;
+  /* CARRUSEL */
+  const images = document.querySelectorAll(".carousel img");
+  let index = 0;
 
+  if (images.length > 0) {
+    setInterval(() => {
+      images[index].classList.remove("active");
+      index = (index + 1) % images.length;
+      images[index].classList.add("active");
+    }, 4000);
+  }
 
-// =========================
-//  PERSONAJES (sección #personajes)
-// =========================
+  /* TEXTO HERO */
+  const titulo = document.getElementById("tituloComic");
+  const sinopsis = document.getElementById("sinopsisComic");
 
-const personajesGrid = document.querySelector("#personajes .plan-grid");
-personajesGrid.innerHTML = ""; // Limpiamos lo estático
+  if (titulo && sinopsis) {
+    titulo.textContent = comic.nombreComic;
+    sinopsis.textContent = comic.sinopsis;
+  }
 
-comic.personajes.forEach(char => {
-  const article = document.createElement("article");
-  const link = document.createElement("a");
-  personajesGrid.classList.add('card')
-  article.classList.add("plan");
+  /* PERSONAJES HOME */
+  const personajesHome = document.getElementById("personajesHome");
 
-  article.innerHTML = `
-  < a href"./personajes.html?id=${char.id}">
- <h3>${char.nombre}</h3>
- <p><img src="${char.imagen} alt="${char.nombre}"></p>
- <p><strong>Rol:</strong> ${char.rol}</p>
- <p>${char.descripcion}</p>
+  if (personajesHome) {
+    comic.personajes.forEach(p => {
+      personajesHome.innerHTML += `
+        <a href="personajes.html?id=${p.id}" class="home-card">
+          <img src="${p.imagen}" alt="${p.nombre}">
+          <h3>${p.nombre}</h3>
+        </a>
+      `;
+    });
+  }
 
-    <img src="${char.imagen}" alt="${char.nombre}" class="personaje-img" />
-    <h3>${char.nombre}</h3>
-    <div class="price"></div>
-    <ul>
-      <li>${char.descripcion}</li>
-    </ul>
-  `;
-  personajesGrid.appendChild(div);
+  /* CAPÍTULOS HOME */
+  const capitulosHome = document.getElementById("capitulosHome");
+
+  if (capitulosHome) {
+    comic.capitulos.forEach(c => {
+      capitulosHome.innerHTML += `
+        <a href="capitulos.html?id=${c.id}" class="home-card">
+          <img src="${c.imagen}" alt="${c.titulo}">
+          <h3>${c.titulo}</h3>
+        </a>
+      `;
+    });
+  }
+
 });
-
-
-// =========================
-//  CAPÍTULOS (sección #capitulos)
-// =========================
-
-const slidesContainer = document.querySelector(".slides");
-slidesContainer.innerHTML = ""; // Limpiar contenido actual
-
-comic.capitulos.forEach(cap => {
-  const slide = document.createElement("div");
-  slide.classList.add("slide");
-
-  slide.innerHTML = `
-      <img src="${cap.portada}" alt="${cap.nombre}" />
-      <div class="meta">
-        <strong>Capítulo ${cap.id}:</strong> ${cap.nombre}
-      </div>
-  `;
-
-  slidesContainer.appendChild(slide);
-});
-  
