@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Eco Olvidado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo">RAIZURA</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="personajes.html">Personajes</a></li>
+    <li><a href="capitulos.html">Capítulos</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="carousel">
+    <img src="raizura.jpeg" class="active">
+    <img src="fruko.jpeg">
+    <img src="abuela.jpeg">
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="hero-text">
+    <h1 id="tituloComic"></h1>
+    <p id="sinopsisComic"></p>
+  </div>
+</header>
+
+<section class="home-section">
+  <h2 class="section-title">Personajes</h2>
+  <div class="cards-row" id="personajesHome"></div>
+</section>
+
+<section class="home-section">
+  <h2 class="section-title">Capítulos</h2>
+  <div class="cards-row" id="capitulosHome"></div>
+</section>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
